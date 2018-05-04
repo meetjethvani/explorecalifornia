@@ -1,5 +1,4 @@
-FROM ubuntu:14.04
-#
-RUN apt-get install httpd -y
-#
-#
+FROM nginx
+COPY . usr/share/nginx/html
+RUN apt-get update
+RUN service nginx restart
